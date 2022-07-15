@@ -34,12 +34,12 @@
 
 <script>
 import { Head, Link } from '@inertiajs/inertia-vue3'
-import Layout from '@/Shared/Layout'
-import TextInput from '@/Shared/TextInput'
-import FileInput from '@/Shared/FileInput'
-import SelectInput from '@/Shared/SelectInput'
-import LoadingButton from '@/Shared/LoadingButton'
-import TrashedMessage from '@/Shared/TrashedMessage'
+import Layout from '@/Layouts/Layout.vue'
+import TextInput from '@/Components/TextInput.vue'
+import FileInput from '@/Components/FileInput.vue'
+import SelectInput from '@/Components/SelectInput.vue'
+import LoadingButton from '@/Components/LoadingButton.vue'
+import TrashedMessage from '@/Components/TrashedMessage.vue'
 
 export default {
   components: {
