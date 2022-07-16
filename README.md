@@ -1,8 +1,6 @@
 # Ping CRM (vite port)
 
-A demo application to illustrate how Inertia.js with vite works.  This project doesn't use laravel mix and instead opts to use the laravel-vite package.  This results in much faster local development.
-
-More about this soon!
+A demo application to illustrate how Inertia.js with vite works.  This project removes laravel mix and utilizes vite.  It follows current laravel-vite standards and is set up for very quick local development. 
 
 ![](https://raw.githubusercontent.com/inertiajs/pingcrm/master/screenshot.png)
 
@@ -10,6 +8,10 @@ More about this soon!
 - Laravel 8+
 - PHP 8.0+
 - Node v16+ (npm v8+)
+
+## Features
+- Vite (super-fast local development)
+- All routing through ziggy
 
 ## Installation
 
