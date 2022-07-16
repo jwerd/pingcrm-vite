@@ -2,7 +2,7 @@
   <div>
     <Head :title="`${form.first_name} ${form.last_name}`" />
     <h1 class="mb-8 text-3xl font-bold">
-      <Link class="text-indigo-400 hover:text-indigo-600" href="/contacts">Contacts</Link>
+      <Link class="text-indigo-400 hover:text-indigo-600" :href="route('contacts')">Contacts</Link>
       <span class="text-indigo-400 font-medium">/</span>
       {{ form.first_name }} {{ form.last_name }}
     </h1>
@@ -78,16 +78,16 @@ export default {
   },
   methods: {
     update() {
-      this.form.put(`/contacts/${this.contact.id}`)
+      this.form.put(route('contacts.update', this.contact.id))
     },
     destroy() {
       if (confirm('Are you sure you want to delete this contact?')) {
-        this.$inertia.delete(`/contacts/${this.contact.id}`)
+        this.$inertia.delete(route('contacts.destroy', this.contact.id))
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this contact?')) {
-        this.$inertia.put(`/contacts/${this.contact.id}/restore`)
+        this.$inertia.put(route('organizations.restore', this.contact.id))
       }
     },
   },
