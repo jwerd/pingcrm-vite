@@ -1,11 +1,10 @@
 <template>
   <div>
+
     <Head title="Create Contact" />
-    <h1 class="mb-8 text-3xl font-bold">
-      <Link class="text-indigo-400 hover:text-indigo-600" :href="route('contacts')">Contacts</Link>
-      <span class="text-indigo-400 font-medium">/</span> Create
-    </h1>
-    <div class="max-w-3xl bg-white rounded-md shadow overflow-hidden">
+
+    <div class="max-w-full bg-white rounded-md shadow overflow-hidden">
+        <Breadcrumbs active="Create" previous="Contacts" :previous_url="route('contacts')"/>
       <form @submit.prevent="store">
         <div class="flex flex-wrap -mb-8 -mr-6 p-8">
           <text-input v-model="form.first_name" :error="form.errors.first_name" class="pb-8 pr-6 w-full lg:w-1/2" label="First name" />
@@ -40,9 +39,11 @@ import Layout from '@/Layouts/Layout.vue'
 import TextInput from '@/Components/TextInput.vue'
 import SelectInput from '@/Components/SelectInput.vue'
 import LoadingButton from '@/Components/LoadingButton.vue'
+import Breadcrumbs from "@/Components/Breadcrumbs.vue";
 
 export default {
   components: {
+      Breadcrumbs,
     Head,
     Link,
     LoadingButton,

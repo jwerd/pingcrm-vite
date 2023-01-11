@@ -72,14 +72,18 @@ import throttle from 'lodash/throttle'
 import mapValues from 'lodash/mapValues'
 import Pagination from '@/Components/Pagination.vue'
 import SearchFilter from '@/Components/SearchFilter.vue'
+import Slideover from "@/Components/Slideover.vue";
+import Create from "@/Pages/Contacts/Create.vue";
 
 export default {
   components: {
+    Slideover,
     Head,
     Icon,
     Link,
     Pagination,
     SearchFilter,
+    Create
   },
   layout: Layout,
   props: {
